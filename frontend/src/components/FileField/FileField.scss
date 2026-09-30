@@ -1,0 +1,54 @@
+.file-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 16px;
+  border: 1.5px dashed var(--border);
+  border-radius: 10px;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+
+  &:hover,
+  &:focus-within {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
+
+  &--selected {
+    border-style: solid;
+    border-color: var(--accent-border);
+  }
+
+  &--invalid {
+    border-color: var(--error);
+  }
+
+  // Covers the whole drop zone so both clicking and dropping a file hit the native input,
+  // while staying focusable so the browser's `required` validation message can anchor to it.
+  &__input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__icon {
+    color: var(--accent);
+    display: inline-flex;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-h);
+    word-break: break-all;
+  }
+
+  &__hint {
+    font-size: 13px;
+  }
+}

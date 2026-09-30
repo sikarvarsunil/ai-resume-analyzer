@@ -1,0 +1,64 @@
+.auth {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  box-sizing: border-box;
+
+  &__card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 32px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+
+    @media (max-width: 480px) {
+      padding: 32px 20px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 28px;
+    text-align: center;
+
+    h1 {
+      font-size: 32px;
+      letter-spacing: -0.6px;
+      margin: 0 0 8px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .button {
+      margin-top: 6px;
+    }
+  }
+
+  &__switch {
+    margin-top: 24px;
+    font-size: 15px;
+    text-align: center;
+
+    a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
